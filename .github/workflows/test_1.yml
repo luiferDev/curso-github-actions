@@ -7,9 +7,16 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola Mundo"
+      - name: touch file
+        run: touch file.txt
+      - name: set text
+        run: echo "Hola Mundo" >> file.txt
+      - name: cat file
+        run: cat file.txt
 
   other:
     runs-on: ubuntu-latest
+    needs: [hola]
     steps:
       - name: LS
         run: ls -la
