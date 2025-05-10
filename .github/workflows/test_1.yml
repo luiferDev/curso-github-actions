@@ -1,6 +1,15 @@
 name: Hola Mundo
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  # workflow_dispatch:
+  # schedule:
+  #   - cron: '0 0 * * *' # every day at midnight
 
 jobs:
   hola:
