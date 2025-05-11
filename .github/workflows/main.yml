@@ -8,8 +8,10 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4.2.2
+
             - name: LS
               run: ls -la
+
             - name: Setup Node.js environment
               uses: actions/setup-node@v4.4.0
               with:
@@ -27,6 +29,10 @@ jobs:
 
             - name: Java version
               run: java --version
+
+            - name: ls
+              uses: ./.github/actions/my-action
+
             # - name: ls
             #   run: |
             #       chmod +x script.sh
